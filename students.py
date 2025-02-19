@@ -17,6 +17,7 @@ class Students:
         CRUD.update(self.id,grade,new_value)
     @staticmethod
     def authoritize(id):
+        #hello how are you?
         try:
             s = CRUD.read(id)
         except:
