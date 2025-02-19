@@ -25,7 +25,11 @@ class Course:
         if not isinstance(student,Students):
             raise ValueError('no such student')
         self.students.append(student.id)
-        CRUD.update_course(self.id,student.id)
+        c = CRUD.read_course(self.id)
+        if student.id in c['students']:
+            pass
+        else:
+            CRUD.update_course(self.id,student.id)
     @staticmethod
     def authoritize(id):
         try:
