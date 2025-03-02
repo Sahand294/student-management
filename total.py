@@ -6,3 +6,4 @@ radman = Students.authoritize(1)
 math = Course.authoritize(1)
 math.add_student(radman)
 AVG(radman.id)
+#hey man!
